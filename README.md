@@ -169,4 +169,6 @@ To initialize the script upon system startup, type
 
 
 
-Enjoy this simple and smart climatization solution
+
+
+Enjoy this simple and smart climatization solution.
