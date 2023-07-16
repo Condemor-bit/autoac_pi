@@ -92,6 +92,7 @@ DHT 22, temperature and humidity sensor.
 The next step is to stay sure that DHT sensor is working. for that make the test file or copy from the repository.
 
 >cd $HOME
+>
 >nano test_dht.py
 
 
