@@ -14,8 +14,11 @@ This user-friendly solution aims to simplify your daily routines and enhance you
 ### Install dependences:
 
 >sudo apt update && upgrade
+>
 >sudo apt install python3-pip
+>
 >sudo pip3 install adafruit-circuitpython
+>
 >sudo apt install lirc
 
 
@@ -52,8 +55,11 @@ dtoverlay=gpio-ir-tx,gpio_pin=14
 In the next step, you need a conf file of your remote control and add it into lirc. In my case, it is a custom file. I captured the button with a receiver KY-022.
 
 >sudo /etc/init.d/lircd stop
+>
 >sudo cp /$HOME/hisense.conf /etc/lirc/lircd.conf.d/hisense.conf
+>
 >sudo /etc/init.d/lircd start
+>
 >sudo /etc/init.d/lircd status
 
 if everthing is OK, you neeed to see something like this:
@@ -81,11 +87,13 @@ The nextstep is to stay sure that DHT sensor is working. for that make the test 
 >import Adafruit_DHT
 >
 >sensor = Adafruit_DHT.DHT22 #specify  DHT22 sensor
+>
 >pin = 2  # were you connected the sensor
 >
 >humedad, temperatura = Adafruit_DHT.read_retry(sensor, pin)
 >
 >print('The temperature is:', temperatura)
+>
 >print('The humidity is:', humedad)
 
 Save the file anda type
@@ -95,6 +103,7 @@ Save the file anda type
 if works you should see 
 
 >The temperature is: 26.600000381469727
+>
 >The humidity is: 47.099998474121094
 
 ### Configure the automation script
@@ -102,17 +111,25 @@ if works you should see
 Copy the Temperature_control.py file to your home directory.
 
 >cd $HOME
+>
 >nano Temperature_control.py
 
 and modfy the folloing lines for your proupose
 
->sensor = Adafruit_DHT.DHT22 
+>sensor = Adafruit_DHT.DHT22
+>
 >pin = 2 #for DHT sensor
+>
 >Hora_empieza=22 #indicate the starting time
+>
 >hora_final=6  #indicate the ending time
+>
 >tiempo_de_espera=600 #This variable indicates the amount of time, in seconds, that the program waits before restarting the loop.
->comando_a_ejecutar="irsend send_once hisense on" 
+>
+>comando_a_ejecutar="irsend send_once hisense on"
+>
 >temperatura_maxima=25.0  #Max temperature
+>
 >temperatura_minima=24.0  #Min temperature
 
 
@@ -130,9 +147,15 @@ The first time you run this command, it will ask you to specify the editor. Choo
 
 >@reboot python3 $HOME/Temperature_control.py >> $HOME/temperature_log.txt 2>&1
 
-This line ensures that your script runs on every Raspberry Pi reboot. Additionally, you can check the log and the output of the script by typing:
+Save and exit the crontab editor.
 
+This line ensures that your script runs on every Raspberry Pi reboot. Additionally, you can check the log and the output of the script by typing:
 >cat temperature_log.txt
 
+To initialize the script upon system startup, type 
+
+>sudo reboot
 
 
+
+Enjoy this simple and smart climatization solution
