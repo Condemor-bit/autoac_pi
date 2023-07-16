@@ -89,7 +89,7 @@ If it doesn't work, first, check the distance. Additionally, if you used a custo
 
 DHT 22, temperature and humidity sensor.
 
-The nextstep is to stay sure that DHT sensor is working. for that make the test file or copy from the repository.
+The next step is to stay sure that DHT sensor is working. for that make the test file or copy from the repository.
 
 >cd $HOME
 >nano test_dht.py
