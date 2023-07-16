@@ -8,6 +8,14 @@ This project offers a cost-effective and straightforward solution to control you
 
 This user-friendly solution aims to simplify your daily routines and enhance your overall comfort with a cost-efficient approach.
 
+Required Components:
+
+    1-Raspberry Pi Zero (or higher version).
+    2-DHT22 temperature and humidity sensor (can be only a temperature sensor).
+    3-KY-005 IR emitter.
+
+Optional:
+    4-KY-022 receiver.
 
 
 
@@ -35,6 +43,7 @@ In my case, I used GPIO 2 for the DHT sensor and GPIO 14 for the IR emitter.
 ### configure lirc version 0.10.1
 
 ![Screenshot from 2023-07-16 14-50-29](https://github.com/Condemor-bit/autoac_pi/assets/119131987/7324f612-02c7-4b98-8ec1-95b2e1c1c36f)
+
 KY-005 emitter
 
 >sudo nano /etc/lirc/lirc_options.conf 
@@ -42,7 +51,7 @@ KY-005 emitter
 and change the following lines
 
 driver          = default
-device          = /dev/lirc0  #if you add sender and reciver IR should be /dev/lirc01
+device          = /dev/lirc0  #if you add sender and receiver IR should be /dev/lirc01
 
 >sudo nano /boot/config.txt
 
@@ -76,6 +85,7 @@ If it doesn't work, check the distance. If you used a custom remote file, check 
 
 ### Check DHT sensor
 ![Screenshot from 2023-07-16 14-55-43](https://github.com/Condemor-bit/autoac_pi/assets/119131987/c87ce4f4-2088-4ac1-8035-cdd331175b2e)
+
 DHT 22, temperature and humidity sensor.
 
 The nextstep is to stay sure that DHT sensor is working. for that make the test file or copy from the repository.
