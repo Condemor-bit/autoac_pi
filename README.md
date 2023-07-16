@@ -52,13 +52,13 @@ KY-005 emitter
 and change the following lines
 
 >driver          = default
->device          = /dev/lirc0  #if you add sender and receiver IR should be /dev/lirc01
+>device          = /dev/lirc0  #if you add emitter and receiver IR should be /dev/lirc01
 
 >sudo nano /boot/config.txt
 
 Find the following lines and remove #
 
->#dtoverlay=gpio-ir,gpio_pin=18  #if you add the reciver uncomment and change de GPIO
+>#dtoverlay=gpio-ir,gpio_pin=18  #if you add the receiver uncomment and change de GPIO
 >
 >dtoverlay=gpio-ir-tx,gpio_pin=14
 
@@ -89,7 +89,7 @@ If it doesn't work, first, check the distance. Additionally, if you used a custo
 
 DHT 22, temperature and humidity sensor.
 
-The next step is to stay sure that DHT sensor is working. for that make the test file or copy from the repository.
+The next step is to ensure that the DHT sensor is working correctly. To do that, either create a test file or copy it from the repository.
 
 >cd $HOME
 >
