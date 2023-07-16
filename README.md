@@ -13,9 +13,10 @@ Required Components:
     1-Raspberry Pi Zero (or higher version).
     2-DHT22 temperature and humidity sensor (can be only a temperature sensor).
     3-KY-005 IR emitter.
-
-Optional:
+    Optional:
     4-KY-022 receiver.
+
+
 
 
 
@@ -50,15 +51,16 @@ KY-005 emitter
 
 and change the following lines
 
-driver          = default
-device          = /dev/lirc0  #if you add sender and receiver IR should be /dev/lirc01
+>driver          = default
+>device          = /dev/lirc0  #if you add sender and receiver IR should be /dev/lirc01
 
 >sudo nano /boot/config.txt
 
 Find the following lines and remove #
 
-#dtoverlay=gpio-ir,gpio_pin=18  #if you add the reciver uncomment and change de GPIO
-dtoverlay=gpio-ir-tx,gpio_pin=14
+>#dtoverlay=gpio-ir,gpio_pin=18  #if you add the reciver uncomment and change de GPIO
+>
+>dtoverlay=gpio-ir-tx,gpio_pin=14
 
 
 In the next step, you need a conf file of your remote control and add it into lirc. In my case, it is a custom file. I captured the button with a receiver KY-022.
@@ -79,9 +81,9 @@ if everthing is OK, you neeed to see something like this:
 check if you can turn on your AC. 
 
 
->irsend send_once hisense on ## irsend send_once REMOTE_CONTROL BUTTOM 
-
-If it doesn't work, check the distance. If you used a custom remote file, check the code indentation, another potential factor is the power supply. It should provide enough power to the IR emitter.
+>irsend send_once hisense on ## irsend send_once REMOTE_CONTROL BUTTOM
+>
+If it doesn't work, first, check the distance. Additionally, if you used a custom remote file, verify the code indentation, and don't forget about the power supply; it should provide sufficient power to the IR emitter.
 
 ### Check DHT sensor
 ![Screenshot from 2023-07-16 14-55-43](https://github.com/Condemor-bit/autoac_pi/assets/119131987/c87ce4f4-2088-4ac1-8035-cdd331175b2e)
