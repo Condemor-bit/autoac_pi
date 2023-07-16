@@ -41,7 +41,7 @@ type in the terminal
 
 In my case, I used GPIO 2 for the DHT sensor and GPIO 14 for the IR emitter.
 
-### configure lirc version 0.10.1
+### configure LIRC version 0.10.1
 
 ![Screenshot from 2023-07-16 14-50-29](https://github.com/Condemor-bit/autoac_pi/assets/119131987/7324f612-02c7-4b98-8ec1-95b2e1c1c36f)
 
@@ -62,8 +62,7 @@ Find the following lines and remove #
 >
 >dtoverlay=gpio-ir-tx,gpio_pin=14
 
-
-In the next step, you need a conf file of your remote control and add it into lirc. In my case, it is a custom file. I captured the button with a receiver KY-022.
+In the next step, you'll need a configuration (conf) file for your remote control and add it to LIRC. In my case, I use a custom file that captures the 'switch on' button using a KY-022 receiver. It's worth noting that you can find a wide variety of remote control configuration files in LIRC database, which can help you save time during the setup process. Additionally, there are numerous tutorials available on the internet to guide you through each step of the process.
 
 >sudo /etc/init.d/lircd stop
 >
