@@ -4,7 +4,7 @@ Project to Automate the Air Conditioner with Raspberry Pi.
 
 ![Screenshot from 2023-07-16 14-42-16](https://github.com/Condemor-bit/autoac_pi/assets/119131987/908c55d5-befc-4586-8dc0-3e3a603ff9a6)
 
-This project offers a cost-effective and straightforward solution to control your air conditioner based on a specific time schedule and desired temperature range. With the help of Raspberry Pi, you can easily program your air conditioning system to turn on and off at designated hours, and by setting temperature thresholds, you can maintain the ideal climate without unnecessary energy consumption.
+This project offers a cost-effective and straightforward solution to control your air conditioner based on a specific time schedule and desired temperature range. With the help of Raspberry Pi, you can easily program your air conditioning system to turn on and off at designated hours. By setting temperature thresholds, you can maintain the ideal climate without unnecessary energy consumption.
 
 This user-friendly solution aims to simplify your daily routines and enhance your overall comfort with a cost-efficient approach.
 
