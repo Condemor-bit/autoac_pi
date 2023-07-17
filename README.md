@@ -6,7 +6,7 @@ Project to Automate the Air Conditioner with Raspberry Pi.
 
 This project offers a cost-effective and straightforward solution to control your air conditioner based on a specific time schedule and desired temperature range. With the help of Raspberry Pi, you can easily program your air conditioning system to turn on and off at designated hours. By setting temperature thresholds, you can maintain the ideal climate without unnecessary energy consumption.
 
-This user-friendly solution aims to simplify your daily routines and enhance your overall comfort with a cost-efficient approach.
+This solution offers great flexibility and efficiency in automating your routines with a cost-efficient approach.
 
 Required Components:
 
