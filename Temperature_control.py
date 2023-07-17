@@ -20,7 +20,9 @@ while True:
     hora_actual = time.localtime().tm_hour
     sys.stdout = open('/home/YOUR_USER_NAME/temperature_log.txt', 'a') ######################
 
-    if hora_actual >= Hora_empieza or hora_actual < hora_final:
+     #if hora_actual >= Hora_empieza or hora_actual < hora_final: #for nighttime behavior
+    if hora_actual >= Hora_empieza and hora_actual < hora_final: #for daytime behavior
+
         print('The time is', hora_actual)
         print("inside the time interval")
         humedad, temperatura = Adafruit_DHT.read_retry(sensor, pin)
